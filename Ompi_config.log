@@ -1,0 +1,570 @@
+root@gpu007:/tmp/openmpi-5.0.3-build# grep -i cuda config.log
+  $ ./configure --prefix=/opt/openmpi-cuda-5.0.3 --with-cuda=/usr/local/cuda --with-cuda-libdir=/usr/local/cuda/lib64
+PATH: /usr/local/cuda/bin/
+PATH: /usr/local/cuda/bin/
+configure:6997: result: /opt/openmpi-cuda-5.0.3
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+configure:60226: running /bin/bash ./configure --disable-option-checking '--prefix=/opt/openmpi-cuda-5.0.3' --disable-dns --disable-http --disable-rpc --disable-openssl --enable-thread-support --disable-evport --disable-gcc-warnings --disable-libevent-regress '--with-cuda=/usr/local/cuda' '--with-cuda-libdir=/usr/local/cuda/lib64' --cache-file=/dev/null --srcdir=.
+configure:62523: running /bin/bash ./configure --disable-option-checking '--prefix=/opt/openmpi-cuda-5.0.3' --enable-plugins '--with-cuda=/usr/local/cuda' '--with-cuda-libdir=/usr/local/cuda/lib64' --cache-file=/dev/null --srcdir=.
+configure:62677: check_package_pkgconfig_run_results=-I/opt/openmpi-cuda-5.0.3/include 
+configure:62687: pkg-config output: -I/opt/openmpi-cuda-5.0.3/include 
+configure:62662: result: -I/opt/openmpi-cuda-5.0.3/include 
+configure:62720: check_package_pkgconfig_run_results=-L/opt/openmpi-cuda-5.0.3/lib 
+configure:62730: pkg-config output: -L/opt/openmpi-cuda-5.0.3/lib 
+configure:62705: result: -L/opt/openmpi-cuda-5.0.3/lib 
+configure:62763: check_package_pkgconfig_run_results=-L/opt/openmpi-cuda-5.0.3/lib 
+configure:62773: pkg-config output: -L/opt/openmpi-cuda-5.0.3/lib 
+configure:62748: result: -L/opt/openmpi-cuda-5.0.3/lib 
+configure:64028: running /bin/bash ./configure --disable-option-checking '--prefix=/opt/openmpi-cuda-5.0.3' --without-tests-examples --enable-pmix-binaries --disable-pmix-backward-compatibility --disable-visibility --with-libevent --disable-libevent-lib-checks --with-libevent-extra-libs="/tmp/openmpi-5.0.3-build/3rd-party/libevent-2.1.12-stable/libevent_core.la /tmp/openmpi-5.0.3-build/3rd-party/libevent-2.1.12-stable/libevent_pthreads.la" --disable-hwloc-lib-checks --with-hwloc-extra-libs="/tmp/openmpi-5.0.3-build/3rd-party/hwloc-2.7.1/hwloc/libhwloc.la" --with-wrapper-libs="-levent_core -levent_pthreads " '--with-cuda=/usr/local/cuda' '--with-cuda-libdir=/usr/local/cuda/lib64' 'CPPFLAGS=-I/tmp/openmpi-5.0.3-build/3rd-party/libevent-2.1.12-stable -I/tmp/openmpi-5.0.3-build/3rd-party/libevent-2.1.12-stable/include -I/tmp/openmpi-5.0.3-build/3rd-party/hwloc-2.7.1/include -I/tmp/openmpi-5.0.3-build/3rd-party/hwloc-2.7.1/include' --cache-file=/dev/null --srcdir=.
+configure:66677: running /bin/bash ./configure --disable-option-checking '--prefix=/opt/openmpi-cuda-5.0.3' --enable-prte-ft --with-proxy-version-string=5.0.3 --with-proxy-package-name="Open MPI" --with-proxy-bugreport="https://www.open-mpi.org/community/help/" --enable-prte-prefix-by-default --with-libevent --disable-libevent-lib-checks --with-libevent-extra-libs="/tmp/openmpi-5.0.3-build/3rd-party/libevent-2.1.12-stable/libevent_core.la /tmp/openmpi-5.0.3-build/3rd-party/libevent-2.1.12-stable/libevent_pthreads.la" --disable-hwloc-lib-checks --with-hwloc-extra-libs="/tmp/openmpi-5.0.3-build/3rd-party/hwloc-2.7.1/hwloc/libhwloc.la" --disable-pmix-lib-checks --with-pmix-extra-libs="/tmp/openmpi-5.0.3-build/3rd-party/openpmix/src/libpmix.la" '--with-cuda=/usr/local/cuda' '--with-cuda-libdir=/usr/local/cuda/lib64' 'CPPFLAGS= -I/tmp/openmpi-5.0.3-build/3rd-party/libevent-2.1.12-stable -I/tmp/openmpi-5.0.3-build/3rd-party/libevent-2.1.12-stable/include -I/tmp/openmpi-5.0.3-build/3rd-party/hwloc-2.7.1/include -I/tmp/openmpi-5.0.3-build/3rd-party/hwloc-2.7.1/include -I/tmp/openmpi-5.0.3-build/3rd-party/openpmix/include -I/tmp/openmpi-5.0.3-build/3rd-party/openpmix/include -I/tmp/openmpi-5.0.3-build/3rd-party/openpmix/ -I/tmp/openmpi-5.0.3-build/3rd-party/openpmix/' --cache-file=/dev/null --srcdir=.
+configure:67333: result:  '--prefix=/opt/openmpi-cuda-5.0.3' '--with-cuda=/usr/local/cuda' '--with-cuda-libdir=/usr/local/cuda/lib64'
+configure:67626: result: rcache-rgpusm rcache-gpusm btl-smcuda accelerator-ze accelerator-rocm accelerator-cuda (default)
+configure:72830: result: cuda, rocm
+configure:5829: --- MCA component accelerator:cuda (m4 configuration macro)
+configure:73385: checking for MCA component accelerator:cuda compile mode
+configure:73427: checking if --with-cuda is set
+configure:73506: result: found (/usr/local/cuda/include/cuda.h)
+configure:73578: checking for cuda pkg-config name
+configure:73609: result: /usr/local/cuda/lib64/pkgconfig/cuda.pc
+configure:73617: checking if cuda pkg-config module exists
+configure:74212: checking for cuda header at /usr/local/cuda/include
+configure:74230: checking for cuda library (cuda) in /usr/local/cuda/lib64
+configure:74883: checking if have cuda support
+configure:75280: checking if MCA component accelerator:cuda can compile
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+configure:79981: result: ofi, portals4, sm, smcuda, tcp, uct, ugni, usnic
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+configure:5829: --- MCA component btl:smcuda (m4 configuration macro)
+configure:85220: checking for MCA component btl:smcuda compile mode
+configure:85261: checking if --with-cuda is set
+configure:85340: result: found (/usr/local/cuda/include/cuda.h)
+configure:85412: checking for cuda pkg-config name
+configure:85443: result: /usr/local/cuda/lib64/pkgconfig/cuda.pc
+configure:85451: checking if cuda pkg-config module exists
+configure:86046: checking for cuda header at /usr/local/cuda/include
+configure:86064: checking for cuda library (cuda) in /usr/local/cuda/lib64
+configure:86717: checking if have cuda support
+configure:87243: checking if MCA component btl:smcuda can compile
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+configure:106421: checking if --with-cuda is set
+configure:106500: result: found (/usr/local/cuda/include/cuda.h)
+configure:106572: checking for cuda pkg-config name
+configure:106603: result: /usr/local/cuda/lib64/pkgconfig/cuda.pc
+configure:106611: checking if cuda pkg-config module exists
+configure:107206: checking for cuda header at /usr/local/cuda/include
+configure:107224: checking for cuda library (cuda) in /usr/local/cuda/lib64
+configure:107877: checking if have cuda support
+configure:108479: checking if --with-cuda is set
+configure:108558: result: found (/usr/local/cuda/include/cuda.h)
+configure:108630: checking for cuda pkg-config name
+configure:108661: result: /usr/local/cuda/lib64/pkgconfig/cuda.pc
+configure:108669: checking if cuda pkg-config module exists
+configure:109264: checking for cuda header at /usr/local/cuda/include
+configure:109282: checking for cuda library (cuda) in /usr/local/cuda/lib64
+configure:109935: checking if have cuda support
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+configure:128605: result: cuda, ftagree, hcoll, monitoring, portals4, sm, ucc
+configure:5829: --- MCA component coll:cuda (m4 configuration macro)
+configure:132170: checking for MCA component coll:cuda compile mode
+configure:132468: checking if MCA component coll:cuda can compile
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+configure:155553: running /bin/bash './configure'  FROM_OMPI=yes CC="gcc" CFLAGS="-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__" CPPFLAGS="" FFLAGS="" LDFLAGS="" --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no --cache-file=/dev/null --srcdir=. --disable-option-checking
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+configure:191803: result: affinity, cuda, ftmpi, rocm, shortfloat
+configure:5829: --- MPI Extension cuda
+configure:192656: checking if MPI Extension cuda can compile
+configure:192669: checking if MPI Extension cuda has C bindings
+configure:192712: checking if MPI Extension cuda has mpif.h bindings
+configure:192794: checking if MPI Extension cuda has "use mpi" bindings
+configure:192857: checking if MPI Extension cuda has "use mpi_f08" bindings
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define OPAL_CUDA_SUPPORT 0
+| #define OPAL_CUDA_SYNC_MEMOPS 
+| #define OPAL_CUDA_GET_ATTRIBUTES 
+| #define OPAL_CUDA_GDR_SUPPORT 1
+| #define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+| #define MPIX_CUDA_AWARE_SUPPORT 0
+| #define OMPI_MPIEXT_COMPONENTS "affinity, cuda, ftmpi, rocm, shortfloat"
+config.status:3335: creating opal/mca/accelerator/cuda/Makefile
+config.status:3335: creating opal/mca/btl/smcuda/Makefile
+config.status:3335: creating ompi/mca/coll/cuda/Makefile
+config.status:3335: creating ompi/mpiext/cuda/Makefile
+config.status:3335: creating ompi/mpiext/cuda/c/Makefile
+config.status:3335: creating ompi/mpiext/cuda/c/mpiext_cuda_c.h
+config.status:3516: ompi/mpiext/cuda/c/mpiext_cuda_c.h is unchanged
+config.status:3672: cd opal/mca/accelerator/cuda       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+config.status:3672: cd opal/mca/btl/smcuda       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+config.status:3672: cd ompi/mca/coll/cuda       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+config.status:3672: cd ompi/mpiext/cuda/c       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+oac_cv_check_package_cuda_pcfilename=/usr/local/cuda/lib64/pkgconfig/cuda.pc
+oac_cv_check_package_cuda_pkg_config_exists=no
+oac_cv_check_package_hwloc_internal_pkg_config_cppflags='-I/opt/openmpi-cuda-5.0.3/include '
+oac_cv_check_package_hwloc_internal_pkg_config_ldflags='-L/opt/openmpi-cuda-5.0.3/lib '
+oac_cv_check_package_hwloc_internal_pkg_config_static_ldflags='-L/opt/openmpi-cuda-5.0.3/lib '
+MCA_BUILD_ompi_coll_cuda_DSO_FALSE=''
+MCA_BUILD_ompi_coll_cuda_DSO_TRUE='#'
+MCA_BUILD_opal_accelerator_cuda_DSO_FALSE='#'
+MCA_BUILD_opal_accelerator_cuda_DSO_TRUE=''
+MCA_BUILD_opal_btl_smcuda_DSO_FALSE='#'
+MCA_BUILD_opal_btl_smcuda_DSO_TRUE=''
+MCA_ompi_coll_ALL_COMPONENTS=' adapt basic han inter libnbc self sync tuned cuda ftagree hcoll monitoring portals4 sm ucc'
+MCA_ompi_coll_ALL_SUBDIRS=' mca/coll/adapt mca/coll/basic mca/coll/han mca/coll/inter mca/coll/libnbc mca/coll/self mca/coll/sync mca/coll/tuned mca/coll/cuda mca/coll/ftagree mca/coll/hcoll mca/coll/monitoring mca/coll/portals4 mca/coll/sm mca/coll/ucc'
+MCA_opal_accelerator_ALL_COMPONENTS=' null cuda rocm'
+MCA_opal_accelerator_ALL_SUBDIRS=' mca/accelerator/null mca/accelerator/cuda mca/accelerator/rocm'
+MCA_opal_btl_ALL_COMPONENTS=' self ofi portals4 sm smcuda tcp uct ugni usnic'
+MCA_opal_btl_ALL_SUBDIRS=' mca/btl/self mca/btl/ofi mca/btl/portals4 mca/btl/sm mca/btl/smcuda mca/btl/tcp mca/btl/uct mca/btl/ugni mca/btl/usnic'
+OMPI_MPIEXT_ALL_SUBDIRS=' mpiext/affinity mpiext/cuda mpiext/ftmpi mpiext/rocm mpiext/shortfloat'
+OMPI_MPIEXT_C_DIRS=' mpiext/affinity/c mpiext/cuda/c mpiext/ftmpi/c mpiext/rocm/c mpiext/shortfloat/c'
+OMPI_MPIEXT_C_LIBS=' $(top_builddir)/ompi/mpiext/affinity/c/libmpiext_affinity_c.la $(top_builddir)/ompi/mpiext/cuda/c/libmpiext_cuda_c.la $(top_builddir)/ompi/mpiext/ftmpi/c/libmpiext_ftmpi_c.la $(top_builddir)/ompi/mpiext/rocm/c/libmpiext_rocm_c.la'
+OMPI_WRAPPER_INCLUDEDIR='/opt/openmpi-cuda-5.0.3/include'
+OMPI_WRAPPER_LIBDIR='/opt/openmpi-cuda-5.0.3/lib'
+OPAL_CONFIGURE_CLI=' \'\''--prefix=/opt/openmpi-cuda-5.0.3\'\'' \'\''--with-cuda=/usr/local/cuda\'\'' \'\''--with-cuda-libdir=/usr/local/cuda/lib64\'\'''
+OPAL_cuda_gdr_support_FALSE='#'
+OPAL_cuda_gdr_support_TRUE=''
+OPAL_cuda_get_attributes_FALSE=''
+OPAL_cuda_get_attributes_TRUE='#'
+OPAL_cuda_support_FALSE=''
+OPAL_cuda_support_TRUE='#'
+OPAL_cuda_sync_memops_FALSE=''
+OPAL_cuda_sync_memops_TRUE='#'
+accelerator_cuda_CPPFLAGS=''
+accelerator_cuda_LDFLAGS=''
+accelerator_cuda_LIBS=''
+btl_smcuda_CPPFLAGS=''
+btl_smcuda_LDFLAGS=''
+btl_smcuda_LIBS=''
+common_cuda_CPPFLAGS=''
+libmca_opal_common_cuda_so_version='80:0:0'
+prefix='/opt/openmpi-cuda-5.0.3'
+#define OPAL_CUDA_SUPPORT 0
+#define OPAL_CUDA_SYNC_MEMOPS 
+#define OPAL_CUDA_GET_ATTRIBUTES 
+#define OPAL_CUDA_GDR_SUPPORT 1
+#define OPAL_CUDA_SUPPORT 0
+#define OPAL_CUDA_SYNC_MEMOPS 
+#define OPAL_CUDA_GET_ATTRIBUTES 
+#define OPAL_CUDA_GDR_SUPPORT 1
+#define OPAL_CUDA_SUPPORT 0
+#define OPAL_CUDA_SYNC_MEMOPS 
+#define OPAL_CUDA_GET_ATTRIBUTES 
+#define OPAL_CUDA_GDR_SUPPORT 1
+#define OPAL_CUDA_SUPPORT 0
+#define OPAL_CUDA_SYNC_MEMOPS 
+#define OPAL_CUDA_GET_ATTRIBUTES 
+#define OPAL_CUDA_GDR_SUPPORT 1
+#define MCA_io_romio341_COMPLETE_CONFIGURE_FLAGS " FROM_OMPI=yes CC='gcc' CFLAGS='-O3 -DNDEBUG  -finline-functions -mcx16 -D__EXTENSIONS__' CPPFLAGS='' FFLAGS='' LDFLAGS='' --enable-shared --disable-static  --prefix=/opt/openmpi-cuda-5.0.3 --disable-aio --disable-weak-symbols --enable-strict --disable-f77 --disable-f90 ac_cv_lib_cuda_cuMemGetAddressRange=no"
+#define MPIX_CUDA_AWARE_SUPPORT 0
+#define OMPI_MPIEXT_COMPONENTS "affinity, cuda, ftmpi, rocm, shortfloat"
